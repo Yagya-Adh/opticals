@@ -17,3 +17,14 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
+/* 
+    --body: #333;
+    --title: black;
+    --desktop: 150px;
+    --tablet: 100px;
+    --landscape-mobile: 80px;
+    --portrait-mobile: 60px;
+    --primary: #182a39;
+    --secondary: #262c40;
+    --bg: #e0ebf4; */
