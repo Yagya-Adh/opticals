@@ -1,6 +1,8 @@
+"use client";
 // import Image from "next/image";
 import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/NavBar";
+import HomeComponent from "./components/home/HomeComponent";
 
 interface InavBar {
   id: number;
@@ -20,7 +22,7 @@ export default function Home() {
   return (
     <>
       <NavBar nav={navBar} />
-
+      <HomeComponent />
       <Footer />
     </>
   );

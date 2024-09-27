@@ -11,6 +11,17 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        optixColor: {
+          optbody: "#333",
+          opttitle: " black",
+          optprimary: "#182a39",
+          optsecondary: "#262c40",
+          optbackground: "#ddd",
+          optbg: "#e0ebf4",
+          optText: "#d9d9d9",
+          optTextPrimary: "#a7bac9",
+        },
       },
     },
   },
