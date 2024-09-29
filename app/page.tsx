@@ -3,6 +3,7 @@
 import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/NavBar";
 import HomeComponent from "./components/home/HomeComponent";
+import LatestProducts from "./components/home/LatestProducts";
 
 interface InavBar {
   id: number;
@@ -23,6 +24,7 @@ export default function Home() {
     <>
       <NavBar nav={navBar} />
       <HomeComponent />
+      <LatestProducts />
       <Footer />
     </>
   );

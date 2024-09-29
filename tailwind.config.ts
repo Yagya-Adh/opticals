@@ -19,6 +19,7 @@ const config: Config = {
           optsecondary: "#262c40",
           optbackground: "#ddd",
           optbg: "#e0ebf4",
+          optTextMain: "#333333",
           optText: "#d9d9d9",
           optTextPrimary: "#a7bac9",
         },

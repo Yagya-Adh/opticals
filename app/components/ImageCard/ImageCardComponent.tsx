@@ -18,13 +18,16 @@ const data = [
 
 const ImageCardComponent = () => {
   return (
-    <div className="grid grid-cols-2 gap-5">
+    <div className="grid grid-cols-2 gap-x-5 w-full">
       {data?.map((lists) => (
-        <div className="rounded-md relative overflow-hidden " key={lists.id}>
+        <div
+          className="flex bg-rose-600 rounded-md relative overflow-hidden w-full"
+          key={lists.id}
+        >
           <Image
             src={lists.image}
             alt="home_card_"
-            className="w-full object-contain"
+            className="w-full object-cover"
           />
           <FooterWaterMarkForImage lists={lists} />
         </div>
@@ -37,12 +40,12 @@ export default ImageCardComponent;
 
 const FooterWaterMarkForImage = ({ lists }) => {
   return (
-    <div className="absolute left-0 bottom-2 w-full">
-      <div className="flex items-center justify-between text-white  text-sm">
+    <div className="absolute left-0 bottom-0 w-full p-4 ">
+      <div className="flex items-center justify-between text-white font-bold text-sm">
         <div>{lists.title}</div>
         <div className="flex items-center">
           {"DISCOVER"}
-          <ChevronRightIcon className="size-4 text-black border rounded-full p-1/4 font-bold" />
+          <ChevronRightIcon className="size-4 text-optixColor-optTextMain border rounded-full p-1/4 font-bold" />
         </div>
       </div>
     </div>
