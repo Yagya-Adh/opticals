@@ -4,6 +4,7 @@ import SectionTag from "../sectionstag/SectionTag";
 import imgs from "../../assets/images/iconGlassess.svg";
 import women from "../../assets/images/customers/lady.jpg";
 import men from "../../assets/images/customers/men.jpg";
+import CustomerForm from "./CustomerForm";
 
 const data = [
   {
@@ -29,6 +30,7 @@ const CustomerReview = () => {
     <div className=" max-w-screen-2xl mx-auto px-5 py-10">
       <SectionTag name="TESTIMONIALS" head="Customers Review" />
       <ConstumersViews />
+      <CustomerForm />
     </div>
   );
 };

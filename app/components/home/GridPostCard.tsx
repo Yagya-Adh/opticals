@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import menHoodie from "../../assets/images/home/menhoodie.png";
 import womenRing from "../../assets/images/home/womenring.png";

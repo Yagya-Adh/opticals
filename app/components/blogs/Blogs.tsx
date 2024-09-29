@@ -51,7 +51,6 @@ const Blogs = () => {
           <LatestNews newslist={newslist} key={newslist.id} />
         ))}
       </div>
-
       <BottomNewsComponent />
     </div>
   );
@@ -90,7 +89,7 @@ const LatestNews = ({ newslist, key }: IPropLatest | object) => {
 
 const BottomNewsComponent = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-20 ">
+    <div className="flex flex-col justify-center items-center pt-20 ">
       <h1 className="text-3xl">Share your stylish moments with #wearoptix</h1>
       <p>
         From everyday elegance to standout looks, show off how you rock your

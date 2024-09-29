@@ -23,6 +23,7 @@ const config: Config = {
           optTextMuted: "#999999",
           optText: "#d9d9d9",
           optTextPrimary: "#a7bac9",
+          optPrimaryBg: "#c6dbef",
         },
       },
     },
