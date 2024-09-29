@@ -58,17 +58,17 @@ export default CustomerForm;
 
 const FormComponent = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 ">
-      <div className=" bg-optixColor-optPrimaryBg ">
-        <div className="p-10">
-          <EyeCheckUp />
-        </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 ">
+      <div className=" bg-optixColor-optPrimaryBg lg:p-10 p-5">
+        <EyeCheckUp />
       </div>
 
       <div className="bg-optixColor-optbg">
         <div className="grid grid-cols-1 items-center gap-10 p-10 ">
           <div className="flex flex-col justify-center items-center w-full">
-            <h1 className="text-3xl">Get free eye-check up at your home</h1>
+            <h1 className="text-3xl mix-w-sm">
+              Get free eye-check up at your home
+            </h1>
             <p className="text-sm max-w-xl p-10">
               Experience the professional eye care right at your doorstep with
               our complimentary home eye-check service. Schedule your free
@@ -78,9 +78,9 @@ const FormComponent = () => {
 
           <div>
             <form className="grid grid-cols-2 gap-5 relative px-20">
-              <div className="flex py-2 border-b border-optixColor-optTextMain">
+              <div className="flex items-center py-2 border-b border-optixColor-optTextMain">
                 <label htmlFor="name">
-                  <UserIcon className="size-10" />
+                  <UserIcon className="size-4" />
                 </label>
                 <input
                   type="text"
@@ -91,9 +91,9 @@ const FormComponent = () => {
                 />
               </div>
 
-              <div className="flex py-2 border-b border-optixColor-optTextMain">
+              <div className="flex items-center py-2 border-b border-optixColor-optTextMain">
                 <label htmlFor="email">
-                  <EnvelopeIcon className="size-10" />
+                  <EnvelopeIcon className="size-4" />
                 </label>
                 <input
                   type="text"
@@ -104,9 +104,9 @@ const FormComponent = () => {
                 />
               </div>
 
-              <div className="flex py-2 border-b border-optixColor-optTextMain">
+              <div className="flex items-center py-2 border-b border-optixColor-optTextMain">
                 <label htmlFor="date">
-                  <CalendarDateRangeIcon className="size-10" />
+                  <CalendarDateRangeIcon className="size-4" />
                 </label>
                 <input
                   type="text"
@@ -117,9 +117,9 @@ const FormComponent = () => {
                 />
               </div>
 
-              <div className="flex py-2 border-b border-optixColor-optTextMain">
+              <div className="flex items-center py-2 border-b border-optixColor-optTextMain">
                 <label htmlFor="phonenumber">
-                  <PhoneIcon className="size-10" />
+                  <PhoneIcon className="size-4" />
                 </label>
                 <input
                   type="text"
@@ -130,19 +130,19 @@ const FormComponent = () => {
                 />
               </div>
 
-              <div className=" col-span-2 flex py-2 border-b border-optixColor-optTextMain">
+              <div className=" col-span-2 flex items-center py-2 border-b border-optixColor-optTextMain">
                 <label htmlFor="address">
-                  <HomeModernIcon className="size-10" />
+                  <HomeModernIcon className="size-4" />
                 </label>
                 <textarea
                   name="address"
                   id="address"
-                  className="p-2 bg-transparent focus:outline-none  w-full"
+                  className="p-2 bg-transparent focus:outline-none "
                   placeholder="Address"
                 ></textarea>
               </div>
 
-              <div className=" absolute right-0 bottom-0">
+              <div className=" absolute right-0 bottom-0 ">
                 <Button text="SUBMIT NOW" />
               </div>
             </form>
@@ -166,16 +166,23 @@ const EyeCheckUp = () => {
                 `}
             >
               <div className="flex items-center">
-                <Image src={checksList.logo} className="" />
+                <Image
+                  src={checksList.logo}
+                  alt="formcheck_logo"
+                  className="onject-cover"
+                />
                 <h1 className="text-xl ms-1">{checksList.title}</h1>
               </div>
               <p>{checksList.slug}</p>
             </div>
-            <Image src={checksList.image} className="" />
+            <Image
+              src={checksList.image}
+              alt="formcheck_image"
+              className="onject-cover"
+            />
           </div>
         ))}
       </div>
     </>
   );
-  `26t5`;
 };

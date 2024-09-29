@@ -103,8 +103,8 @@ const FooterMidSection = () => {
             {lists.heading1}
           </h1>
           {lists.heading2.map((footerTwo) => (
-            <div className="" key={footerTwo.id}>
-              <h2 className="text-sm leading-5"> {footerTwo.heads}</h2>
+            <div className=" " key={footerTwo.id}>
+              <h2 className="text-sm leading-7"> {footerTwo.heads}</h2>
             </div>
           ))}
         </div>

@@ -6,6 +6,7 @@ import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import protect from "../../assets/images/latestNews/protect.jpg";
 import eyewear from "../../assets/images/latestNews/eyewear.jpg";
 import behind from "../../assets/images/latestNews/behind.jpg";
+import Marquee from "./Marquee";
 
 interface InewsProps {
   id: number;
@@ -52,6 +53,7 @@ const Blogs = () => {
         ))}
       </div>
       <BottomNewsComponent />
+      <Marquee />
     </div>
   );
 };
@@ -90,11 +92,11 @@ const LatestNews = ({ newslist, key }: IPropLatest | object) => {
 const BottomNewsComponent = () => {
   return (
     <div className="flex flex-col justify-center items-center pt-20 ">
-      <h1 className="text-3xl">Share your stylish moments with #wearoptix</h1>
-      <p>
-        From everyday elegance to standout looks, show off how you rock your
+      <h1 className="text-3xl">{`Share your stylish moments with #wearoptix`}</h1>
+      <p className="text-center max-w-screen-md min-w-60">
+        {`From everyday elegance to standout looks, show off how you rock your
         Optix eyewear. Join the conversation and be part of our vibrant
-        community of style mavens! #wearoptix"
+        community of style mavens! #wearoptix"`}
       </p>
     </div>
   );

@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animate: {
+        scroll: "scroll 40s linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "transformX(0)" },
+          "100%": { transform: "transformX(calc(-20px* 8))" },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
