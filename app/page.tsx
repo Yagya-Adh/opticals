@@ -3,7 +3,11 @@
 import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/NavBar";
 import HomeComponent from "./components/home/HomeComponent";
-import LatestProducts from "./components/home/LatestProducts";
+import LatestProducts from "./components/latest/LatestProducts";
+import Featured, { FeaturedMainBanner } from "./components/featured/Featured";
+import CustomerReview from "./components/customer/CustomerReview";
+import Blogs from "./components/blogs/Blogs";
+import GridPostCard from "./components/home/GridPostCard";
 
 interface InavBar {
   id: number;
@@ -24,7 +28,12 @@ export default function Home() {
     <>
       <NavBar nav={navBar} />
       <HomeComponent />
+      <GridPostCard />
+      <Featured />
+      <FeaturedMainBanner />
       <LatestProducts />
+      <CustomerReview />
+      <Blogs />
       <Footer />
     </>
   );

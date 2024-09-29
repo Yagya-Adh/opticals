@@ -20,6 +20,7 @@ const config: Config = {
           optbackground: "#ddd",
           optbg: "#e0ebf4",
           optTextMain: "#333333",
+          optTextMuted: "#999999",
           optText: "#d9d9d9",
           optTextPrimary: "#a7bac9",
         },
