@@ -75,7 +75,7 @@ const Blog = () => {
       <NavBar nav={navRouts} />
       <div className="grid grid-cols-1 items-center max-w-screen-2xl mx-auto px-5 gap-y-20 py-10">
         <SectionTag name="BLOGS" head="News & Articles" view="no" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:lg:grid-cols-3 gap-10">
           {data.map((newsItem) => (
             <BlogsMain newslist={newsItem} />
           ))}

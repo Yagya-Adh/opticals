@@ -27,7 +27,7 @@ const Button = ({ text, variant, onSubmit }: ButtonProps) => {
       >
         <div className="flex items-center p-1 hover:bg-black hover:text-white">
           <span>{text}</span>
-          <ChevronRightIcon className="size-5 border rounded-full border-black hover:bg-black hover:text-white hover:border-white" />
+          <ChevronRightIcon className="ms-3 size-5 border rounded-full border-black hover:bg-black hover:text-white hover:border-white" />
         </div>
       </button>
     );
