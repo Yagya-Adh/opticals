@@ -1,10 +1,9 @@
 import { StaticImageData } from "next/image";
-// import Image from "next/image";
 import clearVue from "../../assets/images/latestProducts/clearVue.jpg";
 import slimFrame from "../../assets/images/latestProducts/SlimFrame.jpg";
 import bronze from "../../assets/images/latestProducts/BronzePlated.jpg";
 import rimSpectacle from "../../assets/images/latestProducts/RimSpectacle.jpg";
-// import iconLogo from "../../assets/images/iconGlassess.svg";
+
 import SectionTag from "../sectionstag/SectionTag";
 import ImageGlassess from "../ImageCard/ImageGlassess";
 import LatestCard from "./LatestCard";
