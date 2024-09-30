@@ -1,0 +1,8 @@
+[
+  { "id": 1, "route": "products", "name": "SHOP" },
+  { "id": 2, "route": "about", "name": "OUR STORY" },
+  { "id": 3, "route": "categories", "name": "COLLECTION" },
+  { "id": 4, "route": "reviews", "name": "REVIEW" },
+  { "id": 5, "route": "blogs", "name": "BLOGS" },
+  { "id": 6, "route": "contact-us", "name": "CONTACT" }
+]

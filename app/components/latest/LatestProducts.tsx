@@ -7,6 +7,7 @@ import rimSpectacle from "../../assets/images/latestProducts/RimSpectacle.jpg";
 // import iconLogo from "../../assets/images/iconGlassess.svg";
 import SectionTag from "../sectionstag/SectionTag";
 import ImageGlassess from "../ImageCard/ImageGlassess";
+import LatestCard from "./LatestCard";
 
 interface PropsData {
   id: number;
@@ -25,11 +26,12 @@ const LatestProducts = () => {
   return (
     <div className="max-w-screen-2xl mx-auto px-5 py-10 ">
       <SectionTag name="EXPLORE PRODUCTS" head="Latest Products" />
-      <div className="grid gird:cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 items-center py-40 px-20">
+      <div className="grid gird:cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 items-center py-10 px-20">
         {data?.map((passProp) => (
           <ImageGlassess passProp={passProp} key={passProp.id} />
         ))}
       </div>
+      <LatestCard />
     </div>
   );
 };

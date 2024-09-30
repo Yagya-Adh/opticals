@@ -1,11 +1,4 @@
-import {
-  EnvelopeIcon,
-  UserIcon,
-  CalendarDateRangeIcon,
-  PhoneIcon,
-  HomeModernIcon,
-} from "@heroicons/react/24/outline";
-import Button from "../button/Button";
+"use client";
 import Image, { StaticImageData } from "next/image";
 import freecheck from "../../assets/images/checkup/freecheck.jpg";
 import expertdoctor from "../../assets/images/checkup/expertdoctor.jpg";
@@ -13,7 +6,7 @@ import discounteyewear from "../../assets/images/checkup/discounteyewear.jpg";
 import focusLogo from "../../assets/images/checkup/focus.svg";
 import expertLogo from "../../assets/images/checkup/expert.svg";
 import discountLogo from "../../assets/images/checkup/discount.svg";
-
+import SubmitForm from "../form/SubmitForm";
 interface ICheckupData {
   id: number;
   title: string;
@@ -65,11 +58,11 @@ const FormComponent = () => {
 
       <div className="bg-optixColor-optbg">
         <div className="grid grid-cols-1 items-center gap-10 p-10 ">
-          <div className="flex flex-col justify-center items-center w-full">
+          <div className="flex flex-col justify-center items-center">
             <h1 className="text-3xl mix-w-sm">
               Get free eye-check up at your home
             </h1>
-            <p className="text-sm max-w-xl p-10">
+            <p className="text-sm max-w-xl p-5 font-sans">
               Experience the professional eye care right at your doorstep with
               our complimentary home eye-check service. Schedule your free
               eye-check today and take the first step towards clearer vision.
@@ -77,75 +70,12 @@ const FormComponent = () => {
           </div>
 
           <div>
-            <form className="grid grid-cols-2 gap-5 relative px-20">
-              <div className="flex items-center py-2 border-b border-optixColor-optTextMain">
-                <label htmlFor="name">
-                  <UserIcon className="size-4" />
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  className="p-2 bg-transparent focus:outline-none "
-                  placeholder="FullName"
-                />
-              </div>
-
-              <div className="flex items-center py-2 border-b border-optixColor-optTextMain">
-                <label htmlFor="email">
-                  <EnvelopeIcon className="size-4" />
-                </label>
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  className="p-2 bg-transparent focus:outline-none "
-                  placeholder="EmailAddress"
-                />
-              </div>
-
-              <div className="flex items-center py-2 border-b border-optixColor-optTextMain">
-                <label htmlFor="date">
-                  <CalendarDateRangeIcon className="size-4" />
-                </label>
-                <input
-                  type="text"
-                  name="date"
-                  id="date"
-                  className="p-2 bg-transparent focus:outline-none "
-                  placeholder="Date"
-                />
-              </div>
-
-              <div className="flex items-center py-2 border-b border-optixColor-optTextMain">
-                <label htmlFor="phonenumber">
-                  <PhoneIcon className="size-4" />
-                </label>
-                <input
-                  type="text"
-                  name="phonenumber"
-                  id="phonenumber"
-                  className="p-2 bg-transparent focus:outline-none "
-                  placeholder="PhoneNumber"
-                />
-              </div>
-
-              <div className=" col-span-2 flex items-center py-2 border-b border-optixColor-optTextMain">
-                <label htmlFor="address">
-                  <HomeModernIcon className="size-4" />
-                </label>
-                <textarea
-                  name="address"
-                  id="address"
-                  className="p-2 bg-transparent focus:outline-none "
-                  placeholder="Address"
-                ></textarea>
-              </div>
-
-              <div className=" absolute right-0 bottom-0 ">
-                <Button text="SUBMIT NOW" />
-              </div>
-            </form>
+            <SubmitForm
+              onSubmitHand={(e) => {
+                e.preventDefault();
+                alert("form submitted");
+              }}
+            />
           </div>
         </div>
       </div>
@@ -173,7 +103,7 @@ const EyeCheckUp = () => {
                 />
                 <h1 className="text-xl ms-1">{checksList.title}</h1>
               </div>
-              <p>{checksList.slug}</p>
+              <p className="font-sans"> {checksList.slug}</p>
             </div>
             <Image
               src={checksList.image}

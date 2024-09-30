@@ -17,7 +17,7 @@ interface IPassProps {
 const ImageGlassess = ({ passProp, key }: IPassProps) => {
   return (
     <div
-      className="flex flex-col items-center justify-center border hover:border-black transition-all ease-in-out duration-500  relative"
+      className="flex flex-col items-center justify-center border hover:border-black transition-all ease-in-out duration-500 relative rounded-md"
       key={key}
     >
       <Image

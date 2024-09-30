@@ -39,10 +39,10 @@ export default CustomerReview;
 
 const ConstumersViews = () => {
   return (
-    <div className="grid grid-cols-2 gap-10 py-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
       {data?.map((reviews) => (
         <div
-          className="flex flex-col border w-full rounded-xl px-10 py-20"
+          className="flex flex-col border w-full rounded-xl px-10 py-10"
           key={reviews.id}
         >
           <div className="flex items-center mb-10">
@@ -53,10 +53,10 @@ const ConstumersViews = () => {
             />
             <div className="flex flex-col ">
               <h1>{reviews.name}</h1>
-              <h3>{reviews.title}</h3>
+              <h3 className="text-sm text-gray-700">{reviews.title}</h3>
             </div>
           </div>
-          <p className="">{reviews.description}</p>
+          <p className="font-sans">{reviews.description}</p>
         </div>
       ))}
     </div>

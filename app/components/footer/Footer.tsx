@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
-import optixTwoLogo from "../../assets/images/optixTwo.svg";
 import Image from "next/image";
+import Link from "next/link";
+import optixTwoLogo from "../../assets/images/optixTwo.svg";
 
 interface Iheading2 {
   id: number;
@@ -86,7 +86,7 @@ const FooterTopSection = () => {
       <h1 className="text-sm text-optixColor-optText">
         Optix Eyewear Pvt&#46; Ltd
       </h1>
-      <p className="max-w-60 min-w-72 my-4">
+      <p className="min-w-72 max-w-screen-2xl my-4">
         With a commitment to quality&#44; innovation&#44; and customer
         satisfaction&#44; we offer a curated collection of eyewear&#46;
       </p>
@@ -116,7 +116,9 @@ const FooterMidSection = () => {
 const FooterEndSection = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mt-10 mb-1">
-      <Image src={optixTwoLogo} alt="optix_logo" width={160} height={160} />
+      <Link href={"/"}>
+        <Image src={optixTwoLogo} alt="optix_logo" width={160} height={160} />
+      </Link>
       <div className="flex justify-between items-center p-2">
         <h1>Instagram</h1>
         <h2>Youtube</h2>
