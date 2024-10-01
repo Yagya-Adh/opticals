@@ -8,6 +8,7 @@ import boyCurly from "../../assets/images/home/boycurly.png";
 
 interface IGridPassProps {
   gridPass?: string;
+  variant: string;
 }
 
 interface IgridPostCardData {
@@ -42,37 +43,50 @@ const gridPostCardData: IgridPostCardData[] = [
     background: "bg-[#ebf0f4]",
   },
 
-  // {
-  //   id: 3,
-  //   title: "Deals Good",
-  //   type: "Sunglasses",
-  //   price: 189.0,
-  //   context: "BUY NOW",
-  //   image: womenNonRing,
-  //   span: "row-span-4",
-  //   background: "bg-[#f5f1d5]",
-  // },
-  // {
-  //   id: 4,
-  //   title: "Super Sale",
-  //   type: "Computer Glassess",
-  //   price: 229.0,
-  //   context: "SHOP NOW",
-  //   image: boyCurly,
-  //   span: "row-span-4",
-  //   background: "bg-[#f4e7de]",
-  // },
+  {
+    id: 3,
+    title: "Deals Good",
+    type: "Sunglasses",
+    price: 189.0,
+    context: "BUY NOW",
+    image: womenNonRing,
+    span: "row-span-4",
+    background: "bg-[#f5f1d5]",
+  },
+  {
+    id: 4,
+    title: "Super Sale",
+    type: "Computer Glassess",
+    price: 229.0,
+    context: "SHOP NOW",
+    image: boyCurly,
+    span: "row-span-4",
+    background: "bg-[#f4e7de]",
+  },
 ];
 
 const GridPostCard = () => {
   return (
-    <div className=" mx-auto">
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-1  col-span-3">
-        <BlogCardGroup />
-        <BlogCardGroup
-          gridPass="lg:grid-cols-1 scale-50"
-          width="flex flex-row "
-        />
+    <div className="py-20 max-w-screen-2xl mx-auto">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:col-span-1">
+          {gridPostCardData?.slice(0, 2).map((gridData) => (
+            <BlogCardGroup
+              gridData={gridData}
+              variant="flex lg:items-center lg:flex-col lg:justify-end 
+                md:flex-row items-end"
+            />
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 gap-10 lg:col-span-1">
+          {gridPostCardData?.slice(2, 4).map((gridData) => (
+            <BlogCardGroup
+              gridData={gridData}
+              variant="flex p-10 pb-0 items-end justify-between"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -80,81 +94,38 @@ const GridPostCard = () => {
 
 export default GridPostCard;
 
-const BlogCardGroup = ({ gridPass }: IGridPassProps) => {
+const BlogCardGroup = ({ gridData, variant }: IGridPassProps) => {
   return (
-    <div
-      className={`
-        gap-4 grid md:grid-cols-2 p-5      
-        ${gridPass && gridPass}
-            
-        `}
-    >
-      {gridPostCardData?.map((gridData) => (
-        <div
-          className={`   
-                flex  lg:items-center lg:flex-col
-                md:flex-row items-end
-                      ${gridData.background && gridData.background}     
+    <>
+      <div
+        className={`   
+               rounded-md
+                      ${
+                        gridData.background && gridData.background
+                      }                        
+                      ${variant && variant}
           `}
-          key={gridData.id}
-        >
-          <div className="text-light  ">
-            <h2 className="text-sm ">{gridData.title}</h2>
-            <h3 className="text-2xl font-medium ">{gridData.type}</h3>
-            <h4 className="text-optixColor-optTextMain font-light opacity-80">
-              From ${gridData.price}
-            </h4>
-            <span className="font-medium flex items-center leading-10 min-w-screen-60">
-              {gridData.context}
-              <ChevronRightIcon className="size-6 text-optixColor-optTextMain border border-optixColor-opttitle hover:bg-optixColor-opttitle rounded-full p-1 ms-3 font-bold" />
-            </span>
-          </div>
-          <div>
-            <Image
-              src={gridData.image}
-              alt="grid_image"
-              className="object-cover  max-w-60"
-            />
-          </div>
+        key={gridData.id}
+      >
+        <div className="text-light lg:pb-20">
+          <h2 className="text-sm">{gridData.title}</h2>
+          <h3 className="text-2xl font-medium ">{gridData.type}</h3>
+          <h4 className="text-optixColor-optTextMain font-light opacity-80">
+            From ${gridData.price}
+          </h4>
+          <span className="font-medium flex items-center leading-10 min-w-screen-60">
+            {gridData.context}
+            <ChevronRightIcon className="size-6 text-optixColor-optTextMain border border-optixColor-opttitle hover:bg-optixColor-opttitle rounded-full p-1 ms-3 font-bold" />
+          </span>
         </div>
-      ))}
-    </div>
+        <div>
+          <Image
+            src={gridData.image}
+            alt="grid_image"
+            className="object-cover max-w-60"
+          />
+        </div>
+      </div>
+    </>
   );
 };
-/*  <div
-      className={`
-        gap-4 grid md:grid-cols-2 p-5      
-        ${gridPass && gridPass}
-            
-        `}
-    >
-      {gridPostCardData?.map((gridData) => (
-        <div
-          className={`   
-                flex  lg:items-center lg:flex-col
-                md:flex-row items-end
-               bg-rose-300                  
-          `}
-          key={gridData.id}
-        >
-          <div className="text-light  ">
-            <h2 className="text-sm ">{gridData.title}</h2>
-            <h3 className="text-2xl font-medium ">{gridData.type}</h3>
-            <h4 className="text-optixColor-optTextMain font-light opacity-80">
-              From ${gridData.price}
-            </h4>
-            <span className="font-medium flex items-center leading-10 min-w-screen-60">
-              {gridData.context}
-              <ChevronRightIcon className="size-6 text-optixColor-optTextMain border border-optixColor-opttitle hover:bg-optixColor-opttitle rounded-full p-1 ms-3 font-bold" />
-            </span>
-          </div>
-          <div>
-            <Image
-              src={gridData.image}
-              alt="grid_image"
-              className="object-cover  max-w-60"
-            />
-          </div>
-        </div>
-      ))}
-    </div> */
