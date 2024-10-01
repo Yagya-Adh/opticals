@@ -41,7 +41,7 @@ const LatestCard = () => {
           <div className="flex items-center">
             <div className="-z-10">
               <h1 className="text-xl py-2 min-w-60">{list.description}</h1>
-              <Button text="SHOP NOW" />
+              <Button text="SHOP NOW" variant="dark" />
             </div>
             <Image
               src={list.image}

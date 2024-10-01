@@ -29,7 +29,7 @@ const gridPostCardData: IgridPostCardData[] = [
     context: "SHOP NOW",
     image: menHoodie,
     span: "lg:row-span-4",
-    background: "#f1f4e1",
+    background: "bg-[#f1f4e1]",
   },
   {
     id: 2,
@@ -39,29 +39,29 @@ const gridPostCardData: IgridPostCardData[] = [
     context: "EXPLORE COLLECTION",
     image: womenRing,
     span: "lg:row-span-4",
-    background: "#ebf0f4",
+    background: "bg-[#ebf0f4]",
   },
 
-  {
-    id: 3,
-    title: "Deals Good",
-    type: "Sunglasses",
-    price: 189.0,
-    context: "BUY NOW",
-    image: womenNonRing,
-    span: "row-span-4",
-    background: "#f5f1d5",
-  },
-  {
-    id: 4,
-    title: "Super Sale",
-    type: "Computer Glassess",
-    price: 229.0,
-    context: "SHOP NOW",
-    image: boyCurly,
-    span: "row-span-4",
-    background: "#f4e7de",
-  },
+  // {
+  //   id: 3,
+  //   title: "Deals Good",
+  //   type: "Sunglasses",
+  //   price: 189.0,
+  //   context: "BUY NOW",
+  //   image: womenNonRing,
+  //   span: "row-span-4",
+  //   background: "bg-[#f5f1d5]",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Super Sale",
+  //   type: "Computer Glassess",
+  //   price: 229.0,
+  //   context: "SHOP NOW",
+  //   image: boyCurly,
+  //   span: "row-span-4",
+  //   background: "bg-[#f4e7de]",
+  // },
 ];
 
 const GridPostCard = () => {
@@ -69,10 +69,10 @@ const GridPostCard = () => {
     <div className=" mx-auto">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-1  col-span-3">
         <BlogCardGroup />
-        {/* <BlogCardGroup
+        <BlogCardGroup
           gridPass="lg:grid-cols-1 scale-50"
           width="flex flex-row "
-        /> */}
+        />
       </div>
     </div>
   );
@@ -94,7 +94,7 @@ const BlogCardGroup = ({ gridPass }: IGridPassProps) => {
           className={`   
                 flex  lg:items-center lg:flex-col
                 md:flex-row items-end
-                           
+                      ${gridData.background && gridData.background}     
           `}
           key={gridData.id}
         >
