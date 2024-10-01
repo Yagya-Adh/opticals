@@ -11,6 +11,9 @@ import kidGa from "../assets/images/category/kidga.jpg";
 import computerGa from "../assets/images/category/computerga.jpg";
 import contactGa from "../assets/images/category/contactlens.jpg";
 import sunGa from "../assets/images/category/sunglasses.jpg";
+import Button from "../components/button/Button";
+import visionGirlGa from "../assets/images/category/getvision.png";
+import burberryGa from "../assets/images/category/burberry4.png";
 interface IcardData {
   id: number;
   image: StaticImageData;
@@ -60,18 +63,10 @@ const Categories = () => {
   return (
     <>
       <NavBar nav={navRouts} />
-      <div className="grid grid-cols-1 items-center max-w-screen-2xl mx-auto px-5 gap-y-20 py-10">
+      <div className="items-center max-w-screen-2xl mx-auto px-5 gap-y-20 py-10">
         <SectionTag name="EXPLORE" head="Browse by Category" view="no" />
-        <div className="grid grid-cols-3  gap-10 overflow-hidden">
-          <CartCategory />
-        </div>
-        <SectionTag name="FAQ'S" head="Have Any Questions?" view="no" />
-        <div className="grid grid-cols-3  gap-x-20 gap-y-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-          soluta enim, fugit maxime unde, consequuntur veniam quidem dolor atque
-          nulla ducimus, autem fuga itaque labore asperiores sed ipsum sunt
-          officiis?
-        </div>
+        <CategoryHeaderCard />
+        <CartCategory />
         <ShareText />
         <Marquee />
       </div>
@@ -84,14 +79,18 @@ export default Categories;
 
 const CartCategory = () => {
   return (
-    <>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 overflow-hidden py-10">
       {data?.map((list) => (
         <div
-          className="rounded-md flex flex-col items-center relative overflow-hidden"
+          className="rounded-lg flex flex-col items-center relative overflow-hidden"
           key={list.id}
         >
-          <Image src={list.image} alt="" className="relative scale-95" />
-          <div className="absolute bottom-2 flex flex-col items-center justify-center text-white p-10  w-full overflow-x-hidden">
+          <Image
+            src={list.image}
+            alt="cart_grid_"
+            className="relative scale-95"
+          />
+          <div className="text-center  absolute bottom-2 flex flex-col items-center justify-center text-white p-10  w-full overflow-x-hidden">
             <div className="bg-gradient-to-b from-white-50 to-black blur-2xl p-20 absolute bottom-0 w-[95%] z-20"></div>
             <h1 className="text-2xl shadow-2xl z-20">Men'EyeWear</h1>
             <h2 className=" shadow-2xl z-20">
@@ -100,6 +99,56 @@ const CartCategory = () => {
           </div>
         </div>
       ))}
+    </div>
+  );
+};
+
+const categoyheadData = [
+  {
+    id: 1,
+    image: visionGirlGa,
+    title: "New Classic Wear",
+    slug: "Get the vision you deserve",
+    discount: "",
+    background: "bg-[#e5eee9]",
+  },
+  {
+    id: 1,
+    image: burberryGa,
+    title: "",
+    slug: "Burberry Eyeglasses Look",
+    discount: "Flat 24% off",
+    background: "bg-[#e6eff4]",
+  },
+];
+const CategoryHeaderCard = () => {
+  return (
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {categoyheadData?.map((categoryitem) => (
+          <div
+            className={`flex items-end border rounded-md ${
+              categoryitem.background && categoryitem.background
+            }`}
+            key={categoryitem.id}
+          >
+            <div className="p-10 pb-20">
+              <div>
+                <h1 className="font-light text-sm">{categoryitem.title}</h1>
+                <h2 className="text-2xl">{categoryitem.slug}</h2>
+              </div>
+              <Button text="SHOP NOW" variant="primary-noborder" />
+            </div>
+            <div>
+              <Image
+                src={categoryitem.image}
+                alt="category_"
+                className="w-full"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

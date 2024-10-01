@@ -3,7 +3,14 @@ import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 interface ButtonProps {
   text: string;
-  variant: "primary" | "dark" | "secondary" | "sky" | "next" | "danger";
+  variant:
+    | "primary"
+    | "dark"
+    | "secondary"
+    | "sky"
+    | "next"
+    | "primary-noborder"
+    | "danger";
   onSubmit?: () => void;
 }
 
@@ -15,6 +22,20 @@ const Button = ({ text, variant, onSubmit }: ButtonProps) => {
         className=" rounded-md  border border-black text-sm text-black px-4 py-2 translate-270  overflow-hidden relative "
       >
         <div className="translate-y-0 hover:translate-y-5 ">{text}</div>
+      </button>
+    );
+  }
+
+  if (variant == "primary-noborder") {
+    return (
+      <button
+        onSubmit={onSubmit}
+        className=" rounded-md  text-sm text-black px-4 py-2 translate-270 overflow-hidden relative hover:cursor-pointer"
+      >
+        <div className="flex items-center p-1">
+          <span>{text}</span>
+          <ChevronRightIcon className="ms-3 size-5 border rounded-full border-black hover:bg-black hover:text-white hover:border-white" />
+        </div>
       </button>
     );
   }
