@@ -20,37 +20,31 @@ const ShopCart = () => {
       <div>
         <Button text="SHOP NOW" variant="dark" />
       </div>
-      <div className="">
-        <Image
-          src={circleLine}
-          alt="line_"
-          className=" absolute bottom-0 left-0"
-        />
-      </div>
-      <div className="rotate-45">
-        <Image
-          src={circleLine}
-          alt="line_"
-          className="absolute bottom-10 right-10 size-80 -rotate-180"
-        />
-      </div>
-      <div className="">
-        <Image
-          src={transparentGags}
-          alt="line_"
-          className="absolute top-52 left-96 rotate-45 size-16"
-        />
-        <Image
-          src={jeams}
-          alt="line_"
-          className="absolute bottom-32 right-72 -rotate-45 size-10"
-        />
-        <Image
-          src={raybanGags}
-          alt="line_"
-          className="absolute right-96 bottom-5 rotate-45 size-14"
-        />
-      </div>
+      <Image
+        src={circleLine}
+        alt="line_"
+        className=" absolute top-0 left-0 scale-100"
+      />
+      <Image
+        src={circleLine}
+        alt="line_"
+        className="absolute bottom-0 right-0 size-80 -rotate-180 scale-110"
+      />
+      <Image
+        src={transparentGags}
+        alt="line_"
+        className="absolute bottom-1 left-72 rotate-15 scale-50"
+      />
+      <Image
+        src={raybanGags}
+        alt="line_"
+        className="absolute top-1 right-40 rotate-12 scale-50"
+      />
+      <Image
+        src={jeams}
+        alt="line_"
+        className="absolute  bottom-1 right-1  -rotate-15 scale-50"
+      />
     </div>
   );
 };

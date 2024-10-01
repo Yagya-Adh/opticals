@@ -42,18 +42,22 @@ const BannerText = () => {
   return (
     <div className="grid grid-cols-1 text-optixColor-optTextMain">
       <div className=" ">
-        <PillButton text="Frames of distinction" uppercase="uppercase" />
+        <PillButton
+          text="Frames of distinction"
+          uppercase="uppercase"
+          varriant="primary"
+        />
       </div>
       <h1 className="md:text-6xl text-3xl max-w-screen-sm mt-5">
         Frame your world with eyewear fashion
       </h1>
       <p className="mt-5 max-w-screen-60 mb-4">
-        From sophisticated frames to cutting-edge goggles, we've got everything
-        you need to elevate your look and enhance your vision. Discover a world
-        of eyewear excellence curated just for you.
+        From sophisticated frames to cutting-edge goggles, we&lsquo;ve got
+        everything you need to elevate your look and enhance your vision.
+        Discover a world of eyewear excellence curated just for you.
       </p>
       <div>
-        <Button text="SHOP NOW" />
+        <Button text="SHOP NOW" variant="dark" />
       </div>
     </div>
   );
@@ -71,7 +75,7 @@ const FollowerComponent = () => {
           />
         </div> */}
 
-        <PillButton text="2.6M+ Followers" />
+        <PillButton text="2.6M+ Followers" varriant="primary" />
       </div>
       <p className="text-optixColor-optTextMain border-l border-black ps-4 max-w-60 ">
         Over 3,500 reviews validate our quality with 4.5 stars

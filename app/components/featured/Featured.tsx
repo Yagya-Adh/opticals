@@ -92,7 +92,7 @@ const FeatureSide = () => {
             <h3>{featurePoints.slug}</h3>
           </div>
         ))}
-        <Button text="EXPLORE PRODUCTS" />
+        <Button text="EXPLORE PRODUCTS" variant="dark" />
       </div>
     </div>
   );
