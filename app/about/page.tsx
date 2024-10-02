@@ -17,6 +17,9 @@ import PillButton from "../components/button/PillButton";
 import visionImage from "../assets/images/about/whatdifferent/vision&mission.jpg";
 import HaveAnyQuestion from "../components/about/HaveAnyQuestion";
 import ContactDashImage from "../components/image/ContactDashImage";
+import journeyJPG from "../assets/images/about/journey.jpg";
+import HorizontalTimeLine from "../components/about/HorizontalTimeLine";
+import GroupText from "../components/about/GroupText";
 
 interface mainProps {
   id: number;
@@ -60,7 +63,6 @@ interface ImakeProp {
   contact: string | number;
   order: string;
 }
-
 const makeData: ImakeProp = [
   {
     id: 1,
@@ -105,6 +107,8 @@ const About = () => {
         <div>
           <WhatDifferent />
         </div>
+
+        <OptixJourney />
         <VisionToServe />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-0">
           <HaveAnyQuestion />
@@ -165,7 +169,6 @@ const WhatDifferent = () => {
               alt="different_"
               className={`rounded-md group z-10 ${listing.order} absolute bottom-0`}
             />
-
             <div className="flex flex-col justify-center px-4 pb-20 py-2 z-20 md:order-2 rounded-md bg-optixColor-optCardPrimary h-full  translate-y-80 hover:-translate-y-1 transition-all ease-in-out duration-700 ">
               <h1 className="text-2xl">{listing.title}</h1>
               <p className="py-5 border-b">{listing.describe}</p>
@@ -227,6 +230,28 @@ const Vision = () => {
       <div className="py-10">
         <Button text="CONTACT US" variant="primary" />
       </div>{" "}
+    </div>
+  );
+};
+
+const OptixJourney = () => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <JourneySectionLeft />
+      <Image
+        src={journeyJPG}
+        alt="journey_"
+        className="rounded-md lg:scale-90"
+      />
+    </div>
+  );
+};
+
+const JourneySectionLeft = () => {
+  return (
+    <div className="flex flex-col">
+      <GroupText />
+      <HorizontalTimeLine />
     </div>
   );
 };
