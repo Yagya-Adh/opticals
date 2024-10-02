@@ -1,15 +1,12 @@
 import Image, { StaticImageData } from "next/image";
-// import HaveAnyQuestion from "../components/about/HaveAnyQuestion";
 import Button from "../components/button/Button";
 import Footer from "../components/footer/Footer";
-// import ContactDashImage from "../components/image/ContactDashImage";
 import NavBar from "../components/navbar/NavBar";
 import SectionTag from "../components/sectionstag/SectionTag";
 import ShopCart from "../components/shop/ShopCart";
 import navRouts from "../router.json";
 import smileeWomen from "../assets/images/about/smileLabAssistance.jpg";
 import featuredWomen from "../assets/images/about/featuredGlassesWomen.jpg";
-
 import innoviateGa from "../assets/images/about/whatdifferent/innovation.jpg";
 import customerGa from "../assets/images/about/whatdifferent/customerservice.jpg";
 import ecoFriendGa from "../assets/images/about/whatdifferent/ecofriendly.jpg";
@@ -103,12 +100,10 @@ const About = () => {
         <div className="grid  grid-cols-1 md:grid-cols-2 ">
           <AboutUsMain />
         </div>
-
         <SectionTag name="INNOVATION" head="What make us different" view="no" />
         <div>
           <WhatDifferent />
         </div>
-
         <OptixJourney />
         <StayAheadSection />
         <VisionToServe />
