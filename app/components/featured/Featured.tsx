@@ -1,15 +1,15 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
+import Button from "../button/Button";
+import SectionTag from "../sectionstag/SectionTag";
+import ImageGlassess from "../ImageCard/ImageGlassess";
 import clearVue from "../../assets/images/latestProducts/clearVue.jpg";
 import slimFrame from "../../assets/images/latestProducts/SlimFrame.jpg";
 import bronze from "../../assets/images/latestProducts/BronzePlated.jpg";
 import rimSpectacle from "../../assets/images/latestProducts/RimSpectacle.jpg";
-import SectionTag from "../sectionstag/SectionTag";
-import ImageGlassess from "../ImageCard/ImageGlassess";
-
+import homeFeatureCenterImage from "../../assets/images/home/homefeatured.jpg";
 import featuredMain from "../../assets/images/featured/eyefeature.jpg";
-import Button from "../button/Button";
 
 interface PropsData {
   id: number;
@@ -61,13 +61,19 @@ export default Featured;
 
 export const FeaturedMainBanner = () => {
   return (
-    <div className=" bg-optixColor-optbg text-optixColor-optTextMain flex justify-center items-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 items-center max-w-screen-2xl ">
-        <div className="hidden sm:grid ">
-          <Image src={featuredMain} alt="featured_" className="" />
-        </div>
-        <FeatureSide />
-        {/* <div className=" "></div> */}
+    <div className=" text-optixColor-optTextMain grid grid-cols-1 sm:grid-cols-2 items-center max-w-screen-2xl mx-auto relative h-full">
+      <Image
+        src={featuredMain}
+        alt="featured_"
+        className="h-full hidden sm:grid"
+      />
+      <FeatureSide />
+      <div className="absolute top-[50%] left-[34%] scale-90">
+        <Image
+          src={homeFeatureCenterImage}
+          alt="center_feature_"
+          className="scale-50"
+        />
       </div>
     </div>
   );
@@ -77,22 +83,26 @@ export const FeaturedMainBanner = () => {
 
 const FeatureSide = () => {
   return (
-    <div className="grid grid-cols-1 items-center h-full justify-center px-10">
-      <div className="">
-        <h1 className="text-2xl">Smart Screen Solutions</h1>
+    <div className="flex flex-col justify-center items-center px-20 h-full bg-optixColor-optbg">
+      <div className="flex w-full flex-col">
+        <h1 className="text-3xl ">Smart Screen Solutions</h1>
         <p className="">Reducing eye strain and fatigue during extended use.</p>
       </div>
-      <div className=" flex  items-center flex-col pb-20">
+      <div>
         {featuredData?.map((featurePoints) => (
           <div
-            className="border-b  bg-optixColor-optbg text-optixColor-optTextMain "
+            className="border-b border-optixColor-optsecondary text-optixColor-optTextMain py-5"
             key={featurePoints.id}
           >
-            <h2 className="text-2xl">{featurePoints.headings}</h2>
+            <h2 className="text-xl font-extralight">
+              {featurePoints.headings}
+            </h2>
             <h3>{featurePoints.slug}</h3>
           </div>
         ))}
-        <Button text="EXPLORE PRODUCTS" variant="dark" />
+        <div className="flex justify-start w-full py-2">
+          <Button text="EXPLORE PRODUCTS" variant="dark" />
+        </div>
       </div>
     </div>
   );

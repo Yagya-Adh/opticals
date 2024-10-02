@@ -1,23 +1,28 @@
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import Image, { StaticImageData } from "next/image";
+import {
+  StaticImageData,
+  StaticImport,
+} from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
+import { ReactNode } from "react";
 
 interface InewsProps {
-  id: number;
-  title: string;
+  id: string | undefined;
+  title: ReactNode | string;
   description: string;
-  image?: StaticImageData | string | StaticImport;
+  image?: any;
 }
 
 interface IPropLatest {
   newslist: InewsProps;
+  key: string;
 }
 
-const BlogsMain = ({ newslist }: IPropLatest) => {
+const BlogsMain = ({ newslist, key }: IPropLatest) => {
   return (
     <div
       className="rounded-xl overflow-hidden border object-cover pb-5"
-      id={newslist.id}
+      id={key}
     >
       <Image
         src={newslist.image}

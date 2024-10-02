@@ -6,7 +6,7 @@ import SectionTag from "../components/sectionstag/SectionTag";
 import SubmitForm from "../components/form/SubmitForm";
 import HaveAnyQuestion from "../components/about/HaveAnyQuestion";
 import Footer from "../components/footer/Footer";
-import Marquee from "../components/blogs/Marquee";
+import MarqueeSlide from "../components/blogs/MarqueeSlide";
 import ShareText from "../components/share/ShareText";
 import ContactDashImage from "../components/image/ContactDashImage";
 
@@ -31,7 +31,7 @@ const ContactUs = () => {
           <ContactDashImage />
         </div>
         <ShareText />
-        <Marquee />
+        <MarqueeSlide />
       </div>
       <Footer />
     </>

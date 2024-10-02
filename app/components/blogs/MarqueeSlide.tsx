@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Marquee from "react-fast-marquee";
 import couple from "../../assets/images/marquee/couple.jpg";
 import modelGirl from "../../assets/images/marquee/model_girl.jpg";
 import rayban from "../../assets/images/marquee/rayban.jpg";
@@ -23,23 +24,29 @@ const marquee: Imarquee[] = [
   { id: 8, image: pinkBan },
 ];
 
-const Marquee = () => {
+const MarqueeSlide = () => {
   return (
     <div className="flex pt-20 max-w-screen-xl items-center ">
-      {marquee?.map((listMarquee) => (
-        <div
-          key={listMarquee.id}
-          className="rounded-xl overflow-hidden mx-4 scroll-auto"
-        >
-          <Image
-            src={listMarquee.image}
-            alt="marquee_image"
-            className="object-cover"
-          />
-        </div>
-      ))}
+      {/* 
+      play={false}
+      
+      */}
+      <Marquee pauseOnHover>
+        {marquee?.map((listMarquee) => (
+          <div
+            key={listMarquee.id}
+            className="rounded-xl overflow-hidden mx-4 scroll-auto"
+          >
+            <Image
+              src={listMarquee.image}
+              alt="marquee_image"
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </Marquee>
     </div>
   );
 };
 
-export default Marquee;
+export default MarqueeSlide;
