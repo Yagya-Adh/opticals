@@ -20,6 +20,7 @@ import ContactDashImage from "../components/image/ContactDashImage";
 import journeyJPG from "../assets/images/about/journey.jpg";
 import HorizontalTimeLine from "../components/about/HorizontalTimeLine";
 import GroupText from "../components/about/GroupText";
+import StayAheadSection from "../components/about/StayAheadSection";
 
 interface mainProps {
   id: number;
@@ -109,6 +110,7 @@ const About = () => {
         </div>
 
         <OptixJourney />
+        <StayAheadSection />
         <VisionToServe />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-0">
           <HaveAnyQuestion />

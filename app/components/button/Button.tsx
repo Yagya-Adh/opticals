@@ -10,6 +10,7 @@ interface ButtonProps {
     | "sky"
     | "next"
     | "primary-noborder"
+    | "primay-white"
     | "danger";
   onSubmit?: () => void;
 }
@@ -25,7 +26,16 @@ const Button = ({ text, variant, onSubmit }: ButtonProps) => {
       </button>
     );
   }
-
+  if (variant == "primay-white") {
+    return (
+      <button
+        onSubmit={onSubmit}
+        className=" rounded-md  border border-white text-sm text-white px-4 py-2 translate-270  overflow-hidden relative "
+      >
+        <div className=" ">{text}</div>
+      </button>
+    );
+  }
   if (variant == "primary-noborder") {
     return (
       <button
