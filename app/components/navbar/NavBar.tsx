@@ -3,6 +3,7 @@ import {
   ArchiveBoxIcon,
   MagnifyingGlassIcon,
   UserIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
@@ -78,19 +79,21 @@ const NavBar = ({ nav }: NavBarProps) => {
         </div>
       </nav>
       {pop && (
-        <div className="absolute h-screen w-screen z-20 max-w-screen-2xl top-0">
-          <div className="max-w-screen-2xl h-full w-full flex justify-center items-center">
-            <div className="h-full w-full  max-w-screen-2xl bg-black opacity-70 p-20 "></div>
-            <div className="absolute z-20 bg-white w-1/3 h-1/3  flex flex-col">
-              <div className="p-5 text-black flex justify-between items-center border bottom-2">
-                <h1 className=" text-2xl">Your Cart</h1>
-                <button onClick={() => setPop(!pop)} className="text-2xl">
-                  X{" "}
-                </button>
-              </div>
-              <div className="items-center  justify-center flex flex-col h-full">
-                <p className="text-xl font-bold ">Not items found.</p>
-              </div>
+        <div className="absolute top-0 left-0 inset-0 w-full z-20">
+          <div
+            className="h-full w-full bg-black opacity-70 p-20"
+            onClick={handlePopUp}
+          ></div>
+
+          <div className="absolute top-[40%] left-[40%] rounded-xl overflow-hidden bg-white to-black w-1/3  h-1/3">
+            <div className="flex justify-between border py-3 px-2 text-3xl">
+              <h1>Your Cart</h1>
+              <button onClick={handlePopUp}>
+                <XMarkIcon className="size-5" />
+              </button>
+            </div>
+            <div className="flex justify-center items-center h-full">
+              <p className="font-bold font-sans">No items found.</p>
             </div>
           </div>
         </div>
