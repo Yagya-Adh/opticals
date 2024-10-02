@@ -26,21 +26,32 @@ const marquee: Imarquee[] = [
 
 const MarqueeSlide = () => {
   return (
-    <div className="flex pt-20 max-w-screen-xl items-center ">
-      {/* 
-      play={false}
-      
-      */}
-      <Marquee pauseOnHover>
+    <div className="flex pt-20 items-center flex-row">
+      <Marquee loop={0} speed={100}>
         {marquee?.map((listMarquee) => (
-          <div
-            key={listMarquee.id}
-            className="rounded-xl overflow-hidden mx-4 scroll-auto"
-          >
+          <div key={listMarquee.id} className="overflow-hidden scale-70 m-4">
             <Image
               src={listMarquee.image}
               alt="marquee_image"
-              className="object-cover"
+              className="rounded-xl"
+            />
+          </div>
+        ))}
+        {marquee?.map((listMarquee) => (
+          <div key={listMarquee.id} className="overflow-hidden scale-70 m-4">
+            <Image
+              src={listMarquee.image}
+              alt="marquee_image"
+              className="rounded-xl"
+            />
+          </div>
+        ))}
+        {marquee?.map((listMarquee) => (
+          <div key={listMarquee.id} className="overflow-hidden scale-70 m-4">
+            <Image
+              src={listMarquee.image}
+              alt="marquee_image"
+              className="rounded-xl"
             />
           </div>
         ))}

@@ -3,7 +3,7 @@ import navRouts from "../router.json";
 import NavBar from "../components/navbar/NavBar";
 import SectionTag from "../components/sectionstag/SectionTag";
 import ShareText from "../components/share/ShareText";
-import Marquee from "../components/blogs/Marquee";
+import MarqueeSlide from "../components/blogs/MarqueeSlide";
 import Footer from "../components/footer/Footer";
 import menswear from "../assets/images/category/meneyewear.jpg";
 import womenGa from "../assets/images/category/womeneyewear.jpg";
@@ -63,13 +63,13 @@ const Categories = () => {
   return (
     <>
       <NavBar nav={navRouts} />
-      <div className="items-center max-w-screen-2xl mx-auto px-5 gap-y-20 py-10">
+      <div className="items-center max-w-screen-2xl mx-auto py-5">
         <SectionTag name="EXPLORE" head="Browse by Category" view="no" />
         <CategoryHeaderCard />
         <CartCategory />
         <ShareText />
-        <Marquee />
       </div>
+      <MarqueeSlide />
       <Footer />
     </>
   );

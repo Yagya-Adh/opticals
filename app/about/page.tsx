@@ -58,6 +58,7 @@ interface ImakeProp {
   image: StaticImageData;
   describe: string;
   contact: string | number;
+  order: string;
 }
 
 const makeData: ImakeProp = [
@@ -68,6 +69,7 @@ const makeData: ImakeProp = [
       "From advanced lens coatings to precision frame designs, our innovative solutions redefine clarity, comfort, and style for the modern wearer.",
 
     image: innoviateGa,
+    order: " ",
     contact: "(808) 555-0111",
   },
   {
@@ -77,6 +79,7 @@ const makeData: ImakeProp = [
       "Excellence in service, tailored to you. Our dedicated team is here to ensure your experience is seamless from start to finish.",
     image: customerGa,
     contact: "(808) 555-0112",
+    order: "order-1",
   },
   {
     id: 3,
@@ -85,6 +88,7 @@ const makeData: ImakeProp = [
       "Our eco-friendly practices prioritize the planet while offering you stylish and conscientious eyewear choices.",
     image: ecoFriendGa,
     contact: "(808) 555-0113",
+    order: "  ",
   },
 ];
 
@@ -150,22 +154,20 @@ const AboutUsMain = () => {
 const WhatDifferent = () => {
   return (
     <>
-      <div className="grid grid-cols-3 gap-20 ">
+      <div className="grid grid-cols-1  lg:grid-cols-3 gap-20 ">
         {makeData?.map((listing) => (
           <div
-            className="grid grid-cols-1 items-center rounded-md relative overflow-hidden z-20"
+            className="flex flex-col sm:flex-row lg:flex-col items-center rounded-md relative overflow-hidden"
             key={listing.id}
           >
             <Image
               src={listing.image}
               alt="different_"
-              className="rounded-md group"
+              className={`rounded-md group z-10 ${listing.order} absolute bottom-0`}
             />
-            {/*   <h1 className="px-4 text-2xl bg-optixColor-optPrimaryBg absolute bottom-0 w-full hidden ">
-            {listing.title}
-          </h1> */}
-            <div className="flex flex-col justify-center px-4 pb-20   rounded-md bg-optixColor-optPrimaryBg group-hover:-translate-y-full hover:py-32 items-start z-10 sticky bottom-0">
-              <h1 className="text-2xl translate-y-0   ">{listing.title}</h1>
+
+            <div className="flex flex-col justify-center px-4 pb-20 py-2 z-20 md:order-2 rounded-md bg-optixColor-optCardPrimary h-full  translate-y-80 hover:-translate-y-1 transition-all ease-in-out duration-700 ">
+              <h1 className="text-2xl">{listing.title}</h1>
               <p className="py-5 border-b">{listing.describe}</p>
               <div className="py-4">
                 <h2 className="text-xl">Mailbox</h2>

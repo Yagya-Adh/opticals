@@ -10,13 +10,19 @@ import MarqueeSlide from "../components/blogs/MarqueeSlide";
 import ShareText from "../components/share/ShareText";
 import ContactDashImage from "../components/image/ContactDashImage";
 
+import tweeterSvg from "../assets/images/contact/tweeter.svg";
+import youtubeSvg from "../assets/images/contact/youtube.svg";
+import facebookSvg from "../assets/images/contact/facebook.svg";
+import linkedinSvg from "../assets/images/contact/linkedin.svg";
+import Image from "next/image";
+
 const ContactUs = () => {
   return (
     <>
       <NavBar nav={navRouts} />
       <div className="grid grid-cols-1 items-center max-w-screen-2xl mx-auto px-5 gap-y-20 py-10">
-        <SectionTag name="GET IN TOUCH" head="Contact us" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <SectionTag name="GET IN TOUCH" head="Contact us" view="no" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <SubmitForm
             onSubmitHand={(e) => {
               e.preventDefault();
@@ -26,7 +32,7 @@ const ContactUs = () => {
           <RightSideContact />
         </div>
         <SectionTag name="FAQ'S" head="Have Any Questions?" view="no" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-0">
           <HaveAnyQuestion />
           <ContactDashImage />
         </div>
@@ -63,7 +69,28 @@ const RightSideContact = () => {
       </div>
       <div className="flex justify-between w-full items-center">
         <h5 className="text-xl">Follow on us:</h5>
-        <div>LOGO HERE*******</div>
+        <div className="flex px-20">
+          <Image
+            src={facebookSvg}
+            alt="facebook_"
+            className=" m-1 border border-stone-200 p-2 size-10 rounded-full"
+          />
+          <Image
+            src={tweeterSvg}
+            alt="tweeter_"
+            className=" m-1 border border-stone-200 p-2 size-10 rounded-full"
+          />
+          <Image
+            src={youtubeSvg}
+            alt="youtube_"
+            className=" m-1 border border-stone-200 p-2 size-10 rounded-full"
+          />
+          <Image
+            src={linkedinSvg}
+            alt="linkedin_"
+            className=" m-1 border border-stone-200 p-2 size-10 rounded-full"
+          />
+        </div>
       </div>
     </div>
   );

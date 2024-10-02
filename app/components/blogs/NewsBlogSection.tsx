@@ -19,10 +19,6 @@ interface InewsProps {
   image?: StaticImageData;
 }
 
-// interface IPropLatest {
-//   newslist: InewsProps;
-// }
-
 const data: InewsProps[] = [
   {
     id: 1,
@@ -74,9 +70,7 @@ const NewsBlogSection = () => {
       <div className="max-w-screen-2xl mx-auto px-5 py-10">
         <SectionTag name="Blogs" head="Latest News" />
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-          {data.slice(0, 3).map((news) => (
-            <BlogsMain newslist={news} key={news.id} />
-          ))}
+          <BlogsMain newslist={data} />
         </div>
         <ShareText />
       </div>

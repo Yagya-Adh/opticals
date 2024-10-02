@@ -47,7 +47,7 @@ const LatestCard = () => {
               src={list.image}
               alt="card_image"
               className={`   
-                 size-50 z-20 object-contain
+                 size-50 z-20 object-cover
               `}
             />
           </div>
