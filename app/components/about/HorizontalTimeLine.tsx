@@ -45,7 +45,7 @@ const HorizontalTimeLine = () => {
         {YEARS?.map((time) => (
           <div key={time.id} className="flex items-center">
             <h1
-              className={`rounded-full border px-5  py-1 font-serif
+              className={`rounded-full border border-stone-300 px-5  py-1 font-serif
             ${time.isStart ? "bg-black text-white" : ""}
               
             `}
@@ -53,7 +53,7 @@ const HorizontalTimeLine = () => {
               {time.year}
             </h1>
             {!time.isEnd ? (
-              <div className="border-black border-b w-10"></div>
+              <div className="border-stone-300 border-b w-10"></div>
             ) : (
               ""
             )}
