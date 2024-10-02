@@ -40,7 +40,7 @@ const Button = ({ text, variant, onSubmit }: ButtonProps) => {
     return (
       <button
         onSubmit={onSubmit}
-        className=" rounded-md  text-sm text-black px-4 py-2 translate-270 overflow-hidden relative hover:cursor-pointer"
+        className=" rounded-md  text-sm text-black py-2 translate-270 overflow-hidden relative hover:cursor-pointer"
       >
         <div className="flex items-center p-1">
           <span>{text}</span>

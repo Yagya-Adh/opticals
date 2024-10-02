@@ -59,6 +59,26 @@ const data: IcardData[] = [
   },
 ];
 
+const categoyheadData = [
+  {
+    id: 1,
+    image: visionGirlGa,
+    title: "New Classic Wear",
+    slug: "Get the vision you deserve",
+    discount: "",
+    background: "bg-[#e5eee9]",
+    gridSpan: "md:col-span-3",
+  },
+  {
+    id: 1,
+    image: burberryGa,
+    title: "",
+    slug: "Burberry Eyeglasses Look",
+    discount: "Flat 24% off",
+    background: "bg-[#e6eff4]",
+    gridSpan: "md:col-span-2",
+  },
+];
 const Categories = () => {
   return (
     <>
@@ -82,20 +102,13 @@ const CartCategory = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 overflow-hidden py-10">
       {data?.map((list) => (
         <div
-          className="rounded-lg flex flex-col items-center relative overflow-hidden"
+          className="rounded-lg flex flex-col items-center relative overflow-hidden "
           key={list.id}
         >
-          <Image
-            src={list.image}
-            alt="cart_grid_"
-            className="relative scale-95"
-          />
-          <div className="text-center  absolute bottom-2 flex flex-col items-center justify-center text-white p-10  w-full overflow-x-hidden">
-            <div className="bg-gradient-to-b from-white-50 to-black blur-2xl p-20 absolute bottom-0 w-[95%] z-20"></div>
-            <h1 className="text-2xl shadow-2xl z-20">Men'EyeWear</h1>
-            <h2 className=" shadow-2xl z-20">
-              {"84+ Premium Design Collection"}
-            </h2>
+          <Image src={list.image} alt="cart_grid_" className="relative " />
+          <div className="text-center bg-gradient-to-t from-black absolute bottom-0 flex flex-col items-center justify-center text-white p-10  w-full overflow-x-hidden">
+            <h1 className="text-2xl  z-20">{list.heading}</h1>
+            <h2 className="  z-20">{list.subHeading}</h2>
           </div>
         </div>
       ))}
@@ -103,48 +116,32 @@ const CartCategory = () => {
   );
 };
 
-const categoyheadData = [
-  {
-    id: 1,
-    image: visionGirlGa,
-    title: "New Classic Wear",
-    slug: "Get the vision you deserve",
-    discount: "",
-    background: "bg-[#e5eee9]",
-  },
-  {
-    id: 1,
-    image: burberryGa,
-    title: "",
-    slug: "Burberry Eyeglasses Look",
-    discount: "Flat 24% off",
-    background: "bg-[#e6eff4]",
-  },
-];
 const CategoryHeaderCard = () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
         {categoyheadData?.map((categoryitem) => (
-          <div
-            className={`flex items-end border rounded-md ${
-              categoryitem.background && categoryitem.background
-            }`}
-            key={categoryitem.id}
-          >
-            <div className="p-10 pb-20">
-              <div>
+          <div className={`grid  ${categoryitem.gridSpan}`}>
+            <div
+              className={`flex items-end border rounded-md ${
+                categoryitem.background && categoryitem.background
+              }`}
+              key={categoryitem.id}
+            >
+              <div className="p-10 pb-40 flex flex-col items-start">
                 <h1 className="font-light text-sm">{categoryitem.title}</h1>
                 <h2 className="text-2xl">{categoryitem.slug}</h2>
+                <div>
+                  <Button text="SHOP NOW" variant="primary-noborder" />
+                </div>
               </div>
-              <Button text="SHOP NOW" variant="primary-noborder" />
-            </div>
-            <div>
-              <Image
-                src={categoryitem.image}
-                alt="category_"
-                className="w-full"
-              />
+              <div>
+                <Image
+                  src={categoryitem.image}
+                  alt="category_"
+                  className="w-full"
+                />
+              </div>
             </div>
           </div>
         ))}
