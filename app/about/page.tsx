@@ -23,7 +23,7 @@ interface mainProps {
   id: number;
   title: string;
   description: string;
-  image?: string | StaticImageData;
+  image: StaticImageData;
   order: string;
   padding: string;
   isSection: boolean;
@@ -59,9 +59,9 @@ interface ImakeProp {
   image: StaticImageData;
   describe: string;
   contact: string | number;
-  order: string;
+  order?: string;
 }
-const makeData: ImakeProp = [
+const makeData: ImakeProp[] = [
   {
     id: 1,
     title: "Innovative Eyewear Technology",
