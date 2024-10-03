@@ -2,13 +2,6 @@ import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import ArrowButton from "../button/ArrowButton";
 
-import protect from "../../assets/images/latestNews/protect.jpg";
-import eyewear from "../../assets/images/latestNews/eyewear.jpg";
-import behind from "../../assets/images/latestNews/behind.jpg";
-import history from "../../assets/images/latestNews/history.jpg";
-import benifits from "../../assets/images/latestNews/benifits.jpg";
-import diywear from "../../assets/images/latestNews/Diyeyewear.jpg";
-
 interface InewsProps {
   id: number;
   title: string;
@@ -16,54 +9,14 @@ interface InewsProps {
   image: StaticImageData;
 }
 
-const data: InewsProps[] = [
-  {
-    id: 1,
-    title: "Trendy Eyewear",
-    description:
-      "Protect your peepers: the importance of UV-blocking sunglasses",
-    image: protect,
-  },
-  {
-    id: 2,
-    title: "Visionary Style",
-    description:
-      "Eyewear for every adventure: choosing the right frames for your lifestyle",
-    image: eyewear,
-  },
-  {
-    id: 3,
-    title: "Spectacle Trends",
-    description:
-      "Behind the lens: exploring the technology behind modern eyewear",
-    image: behind,
-  },
-  {
-    id: 4,
-    title: "Fashion Focus",
-    description:
-      "The history of sunglasses: from ancient times to modern trends",
-    image: history,
-  },
-  {
-    id: 5,
-    title: "Fashion Frames",
-    description:
-      "Behind the lens: exploring the technology behind modern eyewear",
-    image: benifits,
-  },
-  {
-    id: 6,
-    title: "Eye Elegance",
-    description:
-      "DIY eyewear accessories: creative ways to customize your frames",
-    image: diywear,
-  },
-];
-const BlogsMain = () => {
+interface IBlogsMain {
+  newslist: InewsProps[];
+}
+
+const BlogsMain = ({ newslist }: IBlogsMain) => {
   return (
     <>
-      {data?.map((listItem) => (
+      {newslist?.map((listItem) => (
         <>
           <div
             className="rounded-xl overflow-hidden border object-cover pb-5"

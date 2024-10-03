@@ -1,7 +1,6 @@
 "use client";
 import { StaticImageData } from "next/image";
 import SectionTag from "../sectionstag/SectionTag";
-// import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import MarqueeSlide from "./MarqueeSlide";
 import protect from "../../assets/images/latestNews/protect.jpg";
 import eyewear from "../../assets/images/latestNews/eyewear.jpg";
@@ -16,7 +15,7 @@ interface InewsProps {
   id: number;
   title: string;
   description: string;
-  image?: StaticImageData;
+  image: StaticImageData;
 }
 
 const data: InewsProps[] = [
