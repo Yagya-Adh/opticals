@@ -29,7 +29,16 @@ const ImageCardComponent = () => {
             alt="home_card_"
             className="w-full object-cover"
           />
-          <FooterWaterMarkForImage lists={lists.title} />
+
+          <div className="absolute left-0 bottom-0 w-full p-4">
+            <div className="flex items-center justify-between text-white font-bold">
+              <h1 className="text-xl">{lists.title}</h1>
+              <div className="flex items-center">
+                <span className="me-2">{"DISCOVER"}</span>
+                <ChevronRightIcon className="size-5 text-optixColor-optTextMain font-bold border rounded-full " />
+              </div>
+            </div>
+          </div>
         </div>
       ))}
     </div>
@@ -37,17 +46,3 @@ const ImageCardComponent = () => {
 };
 
 export default ImageCardComponent;
-
-const FooterWaterMarkForImage = ({ lists }: string | object) => {
-  return (
-    <div className="absolute left-0 bottom-0 w-full p-4">
-      <div className="flex items-center justify-between text-white font-bold">
-        <h1 className="text-xl">{lists}</h1>
-        <div className="flex items-center">
-          <span className="me-2">{"DISCOVER"}</span>
-          <ChevronRightIcon className="size-5 text-optixColor-optTextMain font-bold border rounded-full " />
-        </div>
-      </div>
-    </div>
-  );
-};
