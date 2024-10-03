@@ -1,10 +1,9 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-// import clearVue from "../../assets/images/iconGlassess.svg";
 
 interface IpropsItms {
   id: number;
-  image?: StaticImageData | HTMLImageElement;
+  image: StaticImageData;
   title: string;
   price: number;
 }
