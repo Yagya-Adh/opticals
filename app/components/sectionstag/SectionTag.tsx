@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import iconLogo from "../../assets/images/iconGlassess.svg";
-import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
-import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
+import ArrowButton from "../button/ArrowButton";
 
 interface ISectionTagProps {
   name: string;
@@ -11,6 +10,10 @@ interface ISectionTagProps {
 }
 
 const SectionTag = ({ name, head, view }: ISectionTagProps) => {
+  const handleClick = () => {
+    return alert("Clicked");
+  };
+
   if (view === "no") {
     return (
       <div className="flex justify-between items-center">
@@ -37,15 +40,18 @@ const SectionTag = ({ name, head, view }: ISectionTagProps) => {
 
       <div>
         {name !== "TESTIMONIALS" ? (
-          <button className="text-sm text-optixColor-optTextMuted hover:text-optixColor-opttitle transition-all ease-in-out duration-500">
+          <button
+            onClick={handleClick}
+            className="text-sm text-optixColor-optTextMuted hover:text-optixColor-opttitle transition-all ease-in-out duration-500"
+          >
             {"View All"}
           </button>
         ) : (
           <>
-            <div className="flex">
-              <ArrowLeftCircleIcon className="size-8 me-2" />
-              <ArrowRightCircleIcon className="size-8 " />
-            </div>
+            <ArrowButton
+              variant="double"
+              ClickHandle={() => alert("Thank you for click!")}
+            />
           </>
         )}
       </div>
