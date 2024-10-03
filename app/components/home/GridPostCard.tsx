@@ -75,6 +75,7 @@ const GridPostCard = () => {
               gridData={gridData}
               variant="flex lg:items-center lg:flex-col lg:justify-end 
                 md:flex-row items-end"
+              key={gridData.id}
             />
           ))}
         </div>
@@ -84,6 +85,7 @@ const GridPostCard = () => {
             <BlogCardGroup
               gridData={gridData}
               variant="flex p-10 pb-0 items-end justify-between"
+              key={gridData.id}
             />
           ))}
         </div>

@@ -10,7 +10,7 @@ interface IDataStay {
   image: StaticImageData;
   size: string;
   spanCol: string;
-  isButtonAvailable: Boolean;
+  isButtonAvailable: boolean;
 }
 const data: IDataStay[] = [
   {

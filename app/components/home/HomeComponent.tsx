@@ -1,24 +1,7 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
 import PillButton from "../button/PillButton";
 import Button from "../button/Button";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import ImageCardComponent from "../ImageCard/ImageCardComponent";
-
-// import followerOne from "../../assets/images/home/followe_one.jpg";
-// import followerTwo from "../../assets/images/home/followe_two.jpg";
-// import followerThree from "../../assets/images/home/followe_three.jpg";
-
-// const followerData = [
-//   { id: 1, images: followerOne },
-//   { id: 2, images: followerTwo },
-//   { id: 3, images: followerThree },
-// ];
-
-/* 
-interface IBannerProps {
-  children: () => React.JSX.Element;
-} */
 
 const HomeComponent = () => {
   return (

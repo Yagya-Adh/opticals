@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "year": 2010,
+    "isStart": true,
+    "isEnd": false
+  },
+  {
+    "id": 2,
+    "year": 2013,
+    "isStart": false,
+    "isEnd": false
+  },
+  {
+    "id": 3,
+    "year": 2016,
+    "isStart": false,
+    "isEnd": false
+  },
+  {
+    "id": 4,
+    "year": 2019,
+    "isStart": false,
+    "isEnd": false
+  },
+  {
+    "id": 5,
+    "year": 2022,
+    "isStart": false,
+    "isEnd": true
+  }
+]

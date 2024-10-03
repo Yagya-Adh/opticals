@@ -121,7 +121,10 @@ const CategoryHeaderCard = () => {
     <>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
         {categoyheadData?.map((categoryitem) => (
-          <div className={`grid  ${categoryitem.gridSpan}`}>
+          <div
+            className={`grid  ${categoryitem.gridSpan}`}
+            key={categoryitem.id}
+          >
             <div
               className={`flex items-end border rounded-md ${
                 categoryitem.background && categoryitem.background

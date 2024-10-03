@@ -1,43 +1,12 @@
 "use client";
-
+import journeyTime from "../../../journeyTime.json";
 interface IYears {
   id: number;
   year: number;
   isStart: boolean;
   isEnd: boolean;
 }
-const YEARS: IYears[] = [
-  {
-    id: 1,
-    year: 2010,
-    isStart: true,
-    isEnd: false,
-  },
-  {
-    id: 2,
-    year: 2013,
-    isStart: false,
-    isEnd: false,
-  },
-  {
-    id: 3,
-    year: 2016,
-    isStart: false,
-    isEnd: false,
-  },
-  {
-    id: 4,
-    year: 2019,
-    isStart: false,
-    isEnd: false,
-  },
-  {
-    id: 5,
-    year: 2022,
-    isStart: false,
-    isEnd: true,
-  },
-];
+const YEARS: IYears[] = journeyTime;
 const HorizontalTimeLine = () => {
   return (
     <>
