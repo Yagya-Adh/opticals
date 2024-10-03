@@ -13,7 +13,7 @@ interface InewsProps {
   id: number;
   title: string;
   description: string;
-  image?: StaticImageData;
+  image: StaticImageData;
 }
 
 const data: InewsProps[] = [
@@ -67,7 +67,7 @@ const BlogsMain = () => {
         <>
           <div
             className="rounded-xl overflow-hidden border object-cover pb-5"
-            id={listItem.id}
+            key={listItem.id}
           >
             <Image
               src={listItem.image}
