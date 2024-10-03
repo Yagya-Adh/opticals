@@ -23,7 +23,7 @@ const ShopCart = () => {
       <Image
         src={circleLine}
         alt="line_"
-        className=" absolute top-0 left-0 scale-100"
+        className="absolute top-0 left-0 scale-100"
       />
       <Image
         src={circleLine}
@@ -33,12 +33,12 @@ const ShopCart = () => {
       <Image
         src={transparentGags}
         alt="line_"
-        className="absolute bottom-1 left-72 rotate-15 scale-50"
+        className="hidden md:block absolute bottom-1 left-72 rotate-15 scale-50"
       />
       <Image
         src={raybanGags}
         alt="line_"
-        className="absolute top-1 right-40 rotate-12 scale-50"
+        className="hidden md:block absolute top-1 right-40 rotate-12 scale-50"
       />
       <Image
         src={jeams}

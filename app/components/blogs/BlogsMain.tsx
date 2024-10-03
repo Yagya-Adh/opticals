@@ -10,7 +10,7 @@ interface InewsProps {
 }
 
 interface IBlogsMain {
-  newslist: InewsProps[];
+  newslist?: InewsProps[];
 }
 
 const BlogsMain = ({ newslist }: IBlogsMain) => {
