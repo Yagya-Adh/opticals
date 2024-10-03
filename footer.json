@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "heading1": "CATEGORIES",
+    "heading2": [
+      { "id": 1, "heads": "Men’s Eyewear" },
+      { "id": 2, "heads": "Women’s Eyewear" },
+      { "id": 3, "heads": "Kid’s Glasses" },
+      { "id": 4, "heads": "Computer Glasses" },
+      { "id": 5, "heads": "Contact Lenses" },
+      { "id": 6, "heads": "Sunglasses" }
+    ]
+  },
+
+  {
+    "id": 2,
+    "heading1": "PAGES",
+    "heading2": [
+      { "id": 1, "heads": "About" },
+      { "id": 2, "heads": "Men’s Eyewear" },
+      { "id": 3, "heads": "Blogs" },
+      { "id": 4, "heads": "Reviews" },
+      { "id": 5, "heads": "FAQs" },
+      { "id": 6, "heads": " Stories" }
+    ]
+  },
+  {
+    "id": 3,
+    "heading1": "RESOURCES",
+    "heading2": [
+      { "id": 1, "heads": "PrivacyPolicy" },
+      { "id": 2, "heads": "Terms & Customizs" },
+      { "id": 3, "heads": "Return Policy" },
+      { "id": 4, "heads": "License" }
+    ]
+  },
+  {
+    "id": 4,
+    "heading1": "CONTACTS",
+    "heading2": [
+      { "id": 1, "heads": "2972 Westheimer Rd. Santa Ana, Illinois 85486" },
+      { "id": 2, "heads": "support@example.com" },
+      { "id": 3, "heads": "(239) 555-0108" }
+    ]
+  }
+]

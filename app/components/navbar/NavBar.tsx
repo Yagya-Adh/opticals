@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import {
   ArchiveBoxIcon,
   MagnifyingGlassIcon,
@@ -8,13 +9,11 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import optix from "../../assets/images/optix.svg";
-import { useState } from "react";
 interface INavItem {
   id: number;
   name?: string;
   route?: string;
 }
-
 interface NavBarProps {
   nav: INavItem[];
 }

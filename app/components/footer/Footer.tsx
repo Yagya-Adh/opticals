@@ -3,7 +3,7 @@ import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import optixTwoLogo from "../../assets/images/optixTwo.svg";
-
+import footerDATA from "../../../footer.json";
 interface Iheading2 {
   id: number;
   heads: string;
@@ -15,63 +15,15 @@ interface IfootergridData {
   heading2: Iheading2[];
 }
 
-const footergridData: IfootergridData[] = [
-  {
-    id: 1,
-    heading1: "CATEGORIES",
-    heading2: [
-      { id: 1, heads: "Men’s Eyewear" },
-      { id: 2, heads: "Women’s Eyewear" },
-      { id: 3, heads: "Kid’s Glasses" },
-      { id: 4, heads: "Computer Glasses" },
-      { id: 5, heads: "Contact Lenses" },
-      { id: 6, heads: "Sunglasses" },
-    ],
-  },
-
-  {
-    id: 2,
-    heading1: "PAGES",
-    heading2: [
-      { id: 1, heads: "About" },
-      { id: 2, heads: "Men’s Eyewear" },
-      { id: 3, heads: "Blogs" },
-      { id: 4, heads: "Reviews" },
-      { id: 5, heads: "FAQs" },
-      { id: 6, heads: " Stories" },
-    ],
-  },
-  {
-    id: 3,
-    heading1: "RESOURCES",
-    heading2: [
-      { id: 1, heads: "PrivacyPolicy" },
-      { id: 2, heads: "Terms & Customizs" },
-      { id: 3, heads: "Return Policy" },
-      { id: 4, heads: "License" },
-    ],
-  },
-  {
-    id: 4,
-    heading1: "CONTACTS",
-    heading2: [
-      { id: 1, heads: "2972 Westheimer Rd. Santa Ana, Illinois 85486" },
-      { id: 2, heads: "support@example.com" },
-      { id: 3, heads: "(239) 555-0108" },
-    ],
-  },
-];
+const footergridData: IfootergridData[] = footerDATA;
 const Footer = () => {
   return (
     <footer className=" bg-optixColor-optprimary text-optixColor-optTextPrimary">
       <div className="mx-auto px-10 py-5 flex flex-col max-w-screen-2xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* foot1 */}
           <FooterTopSection />
-          {/* foot2 */}
           <FooterMidSection />
         </div>
-        {/* foot3 */}
         <FooterEndSection />
         <FooterLast />
       </div>
