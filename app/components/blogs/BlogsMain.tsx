@@ -1,3 +1,4 @@
+"use client";
 import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import ArrowButton from "../button/ArrowButton";
@@ -8,11 +9,9 @@ interface InewsProps {
   description: string;
   image: StaticImageData;
 }
-
 interface IBlogsMain {
-  newslist?: InewsProps[];
+  newslist: InewsProps[];
 }
-
 const BlogsMain = ({ newslist }: IBlogsMain) => {
   return (
     <>
