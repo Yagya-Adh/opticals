@@ -58,7 +58,7 @@ interface ImakeProp {
   title: string;
   image: StaticImageData;
   describe: string;
-  contact: string | number;
+  contact: string;
   order?: string;
 }
 const makeData: ImakeProp[] = [
