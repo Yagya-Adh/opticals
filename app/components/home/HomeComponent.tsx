@@ -48,12 +48,12 @@ const BannerText = () => {
         Frame your world with eyewear fashion
       </h1>
       <p className="mt-5 max-w-screen-60 mb-4">
-        From sophisticated frames to cutting-edge goggles, we've got everything
-        you need to elevate your look and enhance your vision. Discover a world
-        of eyewear excellence curated just for you.
+        From sophisticated frames to cutting-edge goggles, we&lsquo;ve got
+        everything you need to elevate your look and enhance your vision.
+        Discover a world of eyewear excellence curated just for you.
       </p>
       <div>
-        <Button text="SHOP NOW" />
+        <Button text="SHOP NOW" variant="dark" />
       </div>
     </div>
   );
