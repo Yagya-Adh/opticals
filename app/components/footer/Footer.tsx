@@ -1,4 +1,5 @@
 "use client";
+import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import optixTwoLogo from "../../assets/images/optixTwo.svg";
@@ -104,7 +105,9 @@ const FooterMidSection = () => {
           </h1>
           {lists.heading2.map((footerTwo) => (
             <div className=" " key={footerTwo.id}>
-              <h2 className="text-sm leading-7"> {footerTwo.heads}</h2>
+              <h2 className="text-sm leading-7 hover:text-white">
+                {footerTwo.heads}
+              </h2>
             </div>
           ))}
         </div>
@@ -120,10 +123,10 @@ const FooterEndSection = () => {
         <Image src={optixTwoLogo} alt="optix_logo" width={160} height={160} />
       </Link>
       <div className="flex justify-between items-center p-2">
-        <h1>Instagram</h1>
-        <h2>Youtube</h2>
-        <h3>Twitter</h3>
-        <h4>LinkedIn</h4>
+        <h1 className="mx-1 text-sm  hover:text-white">Instagram</h1>
+        <h2 className="mx-1 text-sm  hover:text-white">Youtube</h2>
+        <h3 className="mx-1 text-sm  hover:text-white">Twitter</h3>
+        <h4 className="mx-1 text-sm  hover:text-white">LinkedIn</h4>
       </div>
     </div>
   );
@@ -135,7 +138,12 @@ const FooterLast = () => {
       <h2 className="py-2 max-w-96 text-sm">
         &copy; 2024 Optix&#46; Designed by Nixar&#46; Powered by Webflow&#46;
       </h2>
-      <h3 className="py-2">Back To Top&#46;</h3>
+      <Link href={"/"}>
+        <h3 className="py-2 hover:text-white text-sm flex items-center">
+          <ArrowUpIcon className="size-4 animate-bounce" />
+          BackTo Top&#46;
+        </h3>
+      </Link>
     </div>
   );
 };

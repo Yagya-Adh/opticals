@@ -33,6 +33,7 @@ const config: Config = {
           optText: "#d9d9d9",
           optTextPrimary: "#a7bac9",
           optPrimaryBg: "#c6dbef",
+          optCardPrimary: "#e0ebf4",
         },
       },
     },

@@ -59,13 +59,13 @@ const HaveAnyQuestion: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center scroll-smooth">
       {data?.map((list) => (
-        <div className="flex flex-col border-b w-full pb-10" key={list.id}>
+        <div className="flex flex-col border-b w-full pb-10 py-4" key={list.id}>
           <div
             className="flex justify-between items-center cursor-pointer"
             onClick={() => toggleQuestion(list.id)}
           >
             <h2 className="text-xl">{list.question}</h2>
-            <span className="text-light ">
+            <span className="text-light">
               {activeQuestionId !== list.id ? (
                 <PlusIcon className="size-5 text-gray-600 transition-all ease-in-out duration-700" />
               ) : (

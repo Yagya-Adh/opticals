@@ -59,10 +59,10 @@ const FormComponent = () => {
       <div className="bg-optixColor-optbg">
         <div className="grid grid-cols-1 items-center gap-10 p-10 ">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-3xl mix-w-sm">
+            <h1 className="text-3xl min-w-sm max-w-screen-sm">
               Get free eye-check up at your home
             </h1>
-            <p className="text-sm max-w-xl p-5 font-sans">
+            <p className="text-sm max-w-2xl p-5 font-sans">
               Experience the professional eye care right at your doorstep with
               our complimentary home eye-check service. Schedule your free
               eye-check today and take the first step towards clearer vision.

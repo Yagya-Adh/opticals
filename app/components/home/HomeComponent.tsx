@@ -42,7 +42,11 @@ const BannerText = () => {
   return (
     <div className="grid grid-cols-1 text-optixColor-optTextMain">
       <div className=" ">
-        <PillButton text="Frames of distinction" uppercase="uppercase" />
+        <PillButton
+          text="Frames of distinction"
+          uppercase="uppercase"
+          varriant="primary"
+        />
       </div>
       <h1 className="md:text-6xl text-3xl max-w-screen-sm mt-5">
         Frame your world with eyewear fashion
@@ -71,7 +75,7 @@ const FollowerComponent = () => {
           />
         </div> */}
 
-        <PillButton text="2.6M+ Followers" />
+        <PillButton text="2.6M+ Followers" varriant="primary" />
       </div>
       <p className="text-optixColor-optTextMain border-l border-black ps-4 max-w-60 ">
         Over 3,500 reviews validate our quality with 4.5 stars
