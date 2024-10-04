@@ -23,7 +23,6 @@ const data: PropsData[] = [
   { id: 3, image: bronze, title: "ClearVue Vision", price: 165.0 },
   { id: 4, image: rimSpectacle, title: "ClearVue Vision", price: 220.0 },
 ];
-
 const Products = () => {
   return (
     <>
@@ -38,7 +37,6 @@ const Products = () => {
         <div className="flex justify-end">
           <Button text="NEXT" variant="next" />
         </div>
-
         <div className="grid grid-cols-1  px-40">
           <ShopCart />
         </div>

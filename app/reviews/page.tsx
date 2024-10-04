@@ -1,7 +1,6 @@
 import navRouts from "../router.json";
 import NavBar from "../components/navbar/NavBar";
 import SectionTag from "../components/sectionstag/SectionTag";
-// import ShareText from "../components/share/ShareText";
 import Footer from "../components/footer/Footer";
 import CustomersViews from "../components/customer/CustomersViews";
 import Button from "../components/button/Button";

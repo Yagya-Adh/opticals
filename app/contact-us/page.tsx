@@ -9,7 +9,6 @@ import Footer from "../components/footer/Footer";
 import MarqueeSlide from "../components/blogs/MarqueeSlide";
 import ShareText from "../components/share/ShareText";
 import ContactDashImage from "../components/image/ContactDashImage";
-
 import tweeterSvg from "../assets/images/contact/tweeter.svg";
 import youtubeSvg from "../assets/images/contact/youtube.svg";
 import facebookSvg from "../assets/images/contact/facebook.svg";
