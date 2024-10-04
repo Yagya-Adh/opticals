@@ -8,7 +8,7 @@ interface IgridPostCardData {
   type: string;
   price: number;
   context: string;
-  image?: StaticImageData;
+  image: StaticImageData;
   span: string;
   background: string;
 }

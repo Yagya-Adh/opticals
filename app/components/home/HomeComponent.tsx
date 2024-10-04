@@ -57,7 +57,6 @@ const FollowerComponent = () => {
             alt="{user.handle}"
           />
         </div> */}
-
         <PillButton text="2.6M+ Followers" varriant="primary" />
       </div>
       <p className="text-optixColor-optTextMain border-l border-black ps-4 max-w-60 ">
