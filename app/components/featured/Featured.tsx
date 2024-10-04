@@ -13,7 +13,7 @@ import featuredMain from "../../assets/images/featured/eyefeature.jpg";
 
 interface PropsData {
   id: number;
-  image?: StaticImageData;
+  image: StaticImageData;
   title: string;
   price: number;
 }
@@ -78,8 +78,6 @@ export const FeaturedMainBanner = () => {
     </div>
   );
 };
-
-/* here .... */
 
 const FeatureSide = () => {
   return (
