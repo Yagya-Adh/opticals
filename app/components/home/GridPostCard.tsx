@@ -1,15 +1,9 @@
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import Image, { StaticImageData } from "next/image";
-
+import { StaticImageData } from "next/image";
 import menHoodie from "../../assets/images/home/menhoodie.png";
 import womenRing from "../../assets/images/home/womenring.png";
 import womenNonRing from "../../assets/images/home/womennonring.png";
 import boyCurly from "../../assets/images/home/boycurly.png";
-
-interface IGridPassProps {
-  gridPass?: string;
-  variant: string;
-}
+import BlogCardGroup from "./BlogCardGroup";
 
 interface IgridPostCardData {
   id: number;
@@ -95,39 +89,3 @@ const GridPostCard = () => {
 };
 
 export default GridPostCard;
-
-const BlogCardGroup = ({ gridData, variant }: IGridPassProps) => {
-  return (
-    <>
-      <div
-        className={`   
-               rounded-md
-                      ${
-                        gridData.background && gridData.background
-                      }                        
-                      ${variant && variant}
-          `}
-        key={gridData.id}
-      >
-        <div className="text-light lg:pb-20">
-          <h2 className="text-sm">{gridData.title}</h2>
-          <h3 className="text-2xl font-medium ">{gridData.type}</h3>
-          <h4 className="text-optixColor-optTextMain font-light opacity-80">
-            From ${gridData.price}
-          </h4>
-          <span className="font-medium flex items-center leading-10 min-w-screen-60">
-            {gridData.context}
-            <ChevronRightIcon className="size-6 text-optixColor-optTextMain border border-optixColor-opttitle hover:bg-optixColor-opttitle rounded-full p-1 ms-3 font-bold" />
-          </span>
-        </div>
-        <div>
-          <Image
-            src={gridData.image}
-            alt="grid_image"
-            className="object-cover max-w-60"
-          />
-        </div>
-      </div>
-    </>
-  );
-};
