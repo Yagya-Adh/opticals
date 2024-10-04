@@ -13,7 +13,7 @@ import rimSpectacle from "../assets/images/latestProducts/RimSpectacle.jpg";
 
 interface PropsData {
   id: number;
-  image?: StaticImageData;
+  image: StaticImageData;
   title: string;
   price: number;
 }
