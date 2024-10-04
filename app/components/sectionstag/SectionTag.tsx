@@ -13,8 +13,7 @@ const SectionTag = ({ name, head, view }: ISectionTagProps) => {
   const handleClick = () => {
     return alert("Clicked");
   };
-
-  if (view === "no") {
+  if (view == "no") {
     return (
       <div className="flex justify-between items-center">
         <div>
@@ -27,7 +26,6 @@ const SectionTag = ({ name, head, view }: ISectionTagProps) => {
       </div>
     );
   }
-
   return (
     <div className="flex justify-between items-center">
       <div>
@@ -42,7 +40,7 @@ const SectionTag = ({ name, head, view }: ISectionTagProps) => {
         {name !== "TESTIMONIALS" ? (
           <button
             onClick={handleClick}
-            className="text-sm text-optixColor-optTextMuted hover:text-optixColor-opttitle transition-all ease-in-out duration-500"
+            className="text-sm text-optixColor-optTextMuted hover:text-optixColor-opttitle transition-all ease-in-out duration-200"
           >
             {"View All"}
           </button>
