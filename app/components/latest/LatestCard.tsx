@@ -6,7 +6,7 @@ import Button from "../button/Button";
 
 interface PropsData {
   id: number;
-  image?: StaticImageData;
+  image: StaticImageData;
   description: string;
   background: string;
 }

@@ -6,7 +6,7 @@ import ArrowButton from "../button/ArrowButton";
 interface ISectionTagProps {
   name: string;
   head: string;
-  view?: string | "mo";
+  view?: string | "no";
 }
 
 const SectionTag = ({ name, head, view }: ISectionTagProps) => {

@@ -10,7 +10,7 @@ import LatestCard from "./LatestCard";
 
 interface PropsData {
   id: number;
-  image?: StaticImageData;
+  image: StaticImageData;
   title: string;
   price: number;
 }
